@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Webtechnolgie
+    </title>
+</head>
+<body>
+    <h1>Hallo {{naam}}</h1>
+    <p1>
+    {% if instrument %}
+    Het instrument van jouw keuze is {{ instrument }}
+    <br>De keuze van een instrument op in dit formulier:
+    {% else %}
+        Geef de naam van een instrument op in dit formulier:
+    {% endif %}
+    </p1>
+    <form method="POST">
+        {{ form.hiddden_tag() }}
+        {{ form.instrument.label }} {{form.instrument() }}
+        {{ form.submit() }}
+    </form>
+</body>
